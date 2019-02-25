@@ -12,7 +12,14 @@ namespace MonsterClasses
 
         private string _homeSea;
         private bool _hasGills;
+        private bool _laysEggs;
 
+
+        public bool LaysEggs
+        {
+            get { return _laysEggs; }
+            set { _laysEggs = value; }
+        }
 
         public bool HasGills
         {
@@ -27,6 +34,10 @@ namespace MonsterClasses
             set { _homeSea = value; }
         }
 
+        public override bool IsHostile()
+        {
+            return false;
+        }
 
         public override bool IsHappy()
         {

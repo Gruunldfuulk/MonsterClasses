@@ -13,6 +13,47 @@ namespace MonsterClasses
         private int _id;
         private string _name;
         private int _age;
+        private string _color;
+        private string _weight;
+        private bool _canFly;
+        private bool _hasTail;
+        private string _language;
+
+
+        public string Language
+        {
+            get { return _language; }
+            set { _language = value; }
+        }
+
+
+
+        public bool HasTail
+        {
+            get { return _hasTail; }
+            set { _hasTail = value; }
+        }
+
+
+        public bool CanFly
+        {
+            get { return _canFly; }
+            set { _canFly = value; }
+        }
+
+
+        public string Weight
+        {
+            get { return _weight; }
+            set { _weight = value; }
+        }
+
+
+        public string Color
+        {
+            get { return _color; }
+            set { _color = value; }
+        }
 
         public int Age
         {
@@ -38,7 +79,10 @@ namespace MonsterClasses
         {
             return $"Hello, my name is {_name}";
         }
+
         public abstract bool IsHappy();
+
+        public abstract bool IsHostile();
 
         public Monster()
         {
